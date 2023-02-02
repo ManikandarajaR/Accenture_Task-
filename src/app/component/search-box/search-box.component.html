@@ -1,0 +1,49 @@
+<div class="col-md-12">
+    <h2 class="text-primary text-center">
+        Angular Search Box Filter
+    </h2>
+    <hr>
+    <form action="">
+        <div class="input-group d-flex align-items-center">
+            <div class="form-outline m-3">
+                <input type="text" id="form1" class="form-control" [(ngModel)] = "term" name="term"/>
+                
+            </div>
+            <div class="form-outline ">
+                <button class="btn btn-primary">
+                    Search
+                </button>
+            </div>
+            
+            </div>
+    </form>
+            
+    <section id="display" class="p-5"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" *ngFor="let item of top | filter : term">
+                    <div class="p-3 mb-5 box">
+                        <div class="title text-center">
+                            <div class="img text-center">
+                                <img src="{{item.image}}" alt="" width="150" height="150">
+                            </div>
+                            
+                            <div class="rank mt-2">
+                                <small>Rank : {{item.id}}</small>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="content mt-2 p-1">
+                            
+                            <p>Name :   {{item.personName}}</p>
+                            <p>Industry :   {{item.industries}}</p>
+                            <p>Company : {{item.companyName}}</p>
+                            <p>City :   {{item.city}}</p>
+                            <p>Country :  {{item.country}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

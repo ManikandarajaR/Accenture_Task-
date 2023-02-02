@@ -1,0 +1,19 @@
+#display
+{
+    height: 100%;
+}
+
+.pl-2
+{
+    margin-left: 50px;
+}
+
+.p-1 p
+{
+    font-size: 10px;
+}
+
+.box
+{
+    box-shadow: 6px 10px 40px black;
+}
